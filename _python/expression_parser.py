@@ -71,8 +71,3 @@ def str2tree(text, ops=[',', '<=>', '+-', '*/%', '^']):
         raise Exception(f'Unexpected token "{text}"')
     
     return Node(text)
-
-tree = str2tree("a + myfunc(x, y * z ^ 5) < 7")
-
-print('')
-print(tree)
