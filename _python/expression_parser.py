@@ -14,6 +14,23 @@ class Node:
     def __str__(self):
         return self._str(0)
 
+"""
+Transforms a string into a tree, for any number of (single
+character) binary operators. Token names may not have spaces
+or characters that are binary operators.
+
+Example:
+
+"axe + myfunc(x, y * z ^ 5) < 7"
+
+   <
+7          +
+      axe      myfunc
+                  ,
+              x         *
+                     y     ^
+                          z 5
+"""
 def str2tree(text, ops=[',', '<=>', '+-', '*/%', '^']):
     text = text.strip()
     depth = 0
@@ -55,8 +72,7 @@ def str2tree(text, ops=[',', '<=>', '+-', '*/%', '^']):
     
     return Node(text)
 
-# tree = str2tree('foo + bar , baz')
-tree = str2tree('foo( xxxx * bar)')
+tree = str2tree("a + myfunc(x, y * z ^ 5) < 7")
 
 print('')
 print(tree)
