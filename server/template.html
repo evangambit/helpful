@@ -1,0 +1,77 @@
+<html>
+<meta charset="UTF-8">
+<head>
+<title>{{title}}</title>
+<style>
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  color: #bbb;
+  text-align: justify;
+}
+body {
+  display: flex;
+  flex-direction: row;
+}
+</style>
+<script src='server.js'></script>
+<script>
+
+window.addEventListener('load', () => {
+  // Create a file named "bar.txt" that contains "xxx".
+  put_textfile('data/bar.txt', 'xxx', (request, response) => {
+    console.log(response);
+  })
+
+  // Read a file named "foo.txt".
+  get('data/foo.txt', (request, response) => {
+    console.log(response);
+  });
+});
+
+
+</script>
+</head>
+<body>
+<div style='min-width:0.5em; flex:1;'></div>
+
+<div id='content' style='max-width:35em;'>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur luctus tristique. Nullam feugiat nibh eu tempus scelerisque. Nunc semper nec massa sed sagittis. Suspendisse dui massa, mattis et metus sit amet, lacinia luctus odio. Nunc augue mauris, mattis in dapibus nec, fermentum vitae ipsum. Donec rhoncus ligula nec consequat accumsan. Quisque fermentum, odio a pretium tincidunt, ipsum sapien aliquam velit, nec consequat ipsum turpis a mauris. Etiam enim turpis, condimentum in varius sed, luctus non elit. Maecenas non metus id dui dictum posuere. Cras sit amet odio vel sapien volutpat posuere in ac turpis. Donec ipsum sapien, dapibus nec luctus eu, pulvinar ac arcu. Nulla non bibendum justo, eget ullamcorper nisl. Pellentesque eget vestibulum ipsum, a lobortis tellus. Duis a gravida risus.
+  </p>
+  <p>
+    Aenean orci mauris, rhoncus id ornare ut, vehicula eu sem. Ut ultrices felis nibh, a vehicula est ultricies id. Sed tincidunt nibh vel felis ultricies, sed placerat tellus tincidunt. Praesent eget ultrices lacus. Vestibulum vitae tellus libero. Nullam eget bibendum ipsum. Pellentesque sodales orci id pharetra rutrum. Integer sed laoreet ante. Nullam tempus augue ac turpis efficitur cursus. Sed sollicitudin eu justo a laoreet.
+  </p>
+  <p>
+    Proin porta nunc vel magna laoreet molestie. Donec eros mauris, maximus nec dolor a, tempus viverra massa. Etiam lobortis quis mauris a dignissim. Nunc nec tellus id mi mollis aliquam quis a nunc. Duis fermentum tortor eu tellus tempus iaculis. Vestibulum sit amet pharetra lectus. In id eros malesuada, tempor nisi non, semper tortor.
+  </p>
+  <p>
+    Fusce et ex mi. Donec congue lacinia elit sed consequat. Etiam lobortis dui id ipsum scelerisque gravida. Etiam dictum dapibus sem, vel pulvinar augue bibendum quis. Nam tortor diam, auctor non urna eu, egestas rutrum ipsum. Duis fringilla porta tempus. Suspendisse condimentum augue tincidunt lacus scelerisque placerat.
+  </p>
+  <p>
+    Nullam vestibulum, arcu at sodales faucibus, libero erat semper tortor, ac varius lorem risus sit amet nisi. Phasellus venenatis est justo, in elementum nisl volutpat eget. Donec ut porttitor urna, a consectetur ante. Quisque id maximus lorem. Praesent in elit vitae velit imperdiet tristique at at orci. Nullam sed aliquam tortor. In fermentum in tortor vitae aliquam.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur luctus tristique. Nullam feugiat nibh eu tempus scelerisque. Nunc semper nec massa sed sagittis. Suspendisse dui massa, mattis et metus sit amet, lacinia luctus odio. Nunc augue mauris, mattis in dapibus nec, fermentum vitae ipsum. Donec rhoncus ligula nec consequat accumsan. Quisque fermentum, odio a pretium tincidunt, ipsum sapien aliquam velit, nec consequat ipsum turpis a mauris. Etiam enim turpis, condimentum in varius sed, luctus non elit. Maecenas non metus id dui dictum posuere. Cras sit amet odio vel sapien volutpat posuere in ac turpis. Donec ipsum sapien, dapibus nec luctus eu, pulvinar ac arcu. Nulla non bibendum justo, eget ullamcorper nisl. Pellentesque eget vestibulum ipsum, a lobortis tellus. Duis a gravida risus.
+  </p>
+  <p>
+    Aenean orci mauris, rhoncus id ornare ut, vehicula eu sem. Ut ultrices felis nibh, a vehicula est ultricies id. Sed tincidunt nibh vel felis ultricies, sed placerat tellus tincidunt. Praesent eget ultrices lacus. Vestibulum vitae tellus libero. Nullam eget bibendum ipsum. Pellentesque sodales orci id pharetra rutrum. Integer sed laoreet ante. Nullam tempus augue ac turpis efficitur cursus. Sed sollicitudin eu justo a laoreet.
+  </p>
+  <p>
+    Proin porta nunc vel magna laoreet molestie. Donec eros mauris, maximus nec dolor a, tempus viverra massa. Etiam lobortis quis mauris a dignissim. Nunc nec tellus id mi mollis aliquam quis a nunc. Duis fermentum tortor eu tellus tempus iaculis. Vestibulum sit amet pharetra lectus. In id eros malesuada, tempor nisi non, semper tortor.
+  </p>
+  <p>
+    Fusce et ex mi. Donec congue lacinia elit sed consequat. Etiam lobortis dui id ipsum scelerisque gravida. Etiam dictum dapibus sem, vel pulvinar augue bibendum quis. Nam tortor diam, auctor non urna eu, egestas rutrum ipsum. Duis fringilla porta tempus. Suspendisse condimentum augue tincidunt lacus scelerisque placerat.
+  </p>
+  <p>
+    Nullam vestibulum, arcu at sodales faucibus, libero erat semper tortor, ac varius lorem risus sit amet nisi. Phasellus venenatis est justo, in elementum nisl volutpat eget. Donec ut porttitor urna, a consectetur ante. Quisque id maximus lorem. Praesent in elit vitae velit imperdiet tristique at at orci. Nullam sed aliquam tortor. In fermentum in tortor vitae aliquam.
+  </p>
+</div>
+
+<div style='min-width:0.5em; flex:1;'></div>
+
+</body>
+</html>
