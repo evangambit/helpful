@@ -35,9 +35,7 @@ class MMappedFile {
   }
 
   ~MMappedFile(){
-    if(munmap(data_, length_ * sizeof(T)) == -1) {
-      throw std::runtime_error("Failed to un-mmap");
-    }
+    munmap(data_, length_ * sizeof(T));
   }
 
   inline T const& operator[](size_t idx) const {
